@@ -76,7 +76,6 @@ $filmes = [$filme1, $filme2, $filme3, $filme4];
             <?php endforeach ?>
         </div>
     </div>
-
 </body>
 
 </html>
