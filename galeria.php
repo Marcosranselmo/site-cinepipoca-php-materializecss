@@ -54,26 +54,27 @@ $filmes = [$filme1, $filme2, $filme3, $filme4];
         </div>
     </nav>
 
-    <div class="div row">
-        <?php foreach($filmes as $filme) : ?>
-
-                <div class="col s3">
-                    <div class="card hoverable">
-                        <div class="card-image">
-                            <img src="<?= $filme["poster"] ?>">
-                            <a class="btn-floating halfway-fab waves-effect waves-light red">
-                                <i class="material-icons">favorite_border</i></a>
-                        </div>
-                        <div class="card-content">
-                            <p class="valign-wrapper">
-                                <i class="material-icons amber-text">star</i> <?= $filme["nota"] ?>
-                            </p>
-                            <span class="card-title"><?= $filme["titulo"] ?></span>
-                            <p><?= $filme1["sinopse"] ?></p>
+    <div class="container">
+        <div class="div row">
+            <?php foreach($filmes as $filme) : ?>
+                    <div class="col s3">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img src="<?= $filme["poster"] ?>">
+                                <a class="btn-floating halfway-fab waves-effect waves-light red">
+                                    <i class="material-icons">favorite_border</i></a>
+                            </div>
+                            <div class="card-content">
+                                <p class="valign-wrapper">
+                                    <i class="material-icons amber-text">star</i> <?= $filme["nota"] ?>
+                                </p>
+                                <span class="card-title"><?= $filme["titulo"] ?></span>
+                                <p><?= $filme1["sinopse"] ?></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-        <?php endforeach ?>
+            <?php endforeach ?>
+        </div>
     </div>
 
 </body>
