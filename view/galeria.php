@@ -35,8 +35,9 @@ $filmes = $controller->index();
                         <div class="card hoverable">
                             <div class="card-image">
                                 <img src="<?= $filme->poster ?>">
-                                <a class="btn-floating halfway-fab waves-effect waves-light red">
-                                    <i class="material-icons">favorite_border</i></a>
+                                <button class="btn-fav btn-floating halfway-fab waves-effect waves-light red">
+                                    <i class="material-icons">favorite_border</i>
+                                </button>
                             </div>
                             <div class="card-content">
                                 <p class="valign-wrapper">
@@ -51,6 +52,19 @@ $filmes = $controller->index();
         </div>
     </div>
 <?= Mensagem::mostrar(); ?>
+
+<script>
+    document.querySelectorAll(".btn-fav").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            fetch("/favoritar");
+            if (btn.querySelector("i").innerHTML === "favorite") {
+                btn.querySelector("i").innerHTML = "favorite_border"
+            }else{
+                btn.querySelector("i").innerHTML = "favorite"
+            }
+        })
+    });
+</script>
 
 </body>
 
