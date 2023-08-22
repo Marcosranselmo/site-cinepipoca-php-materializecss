@@ -21,7 +21,7 @@
   </nav>
 
   <div class="row">
-    <form action="inserirFilme.php" method="POST">
+    <form method="POST" enctype="multipart/form-data">
       <div class="col s6 offset-s3">
         <div class="card">
           <div class="card-content">
@@ -30,7 +30,7 @@
             <!-- input titulo -->
             <div class="row">
               <div class="input-field col s12">
-                <input id="titulo" type="text" name="titulo" class="validate">
+                <input id="titulo" type="text" name="titulo" class="validate" required>
                 <label for="titulo">Título do Filme</label>
               </div>
             </div>
@@ -48,7 +48,7 @@
             <!-- input nota -->
             <div class="row">
               <div class="input-field col s4">
-                <input id="nota" name="nota" type="number" step=".1" min=0 max=10 class="validate">
+                <input id="nota" name="nota" type="number" step=".1" min=0 max=10 class="validate" required>
                 <label for="nota">Nota </label>
               </div>
             </div>
@@ -57,7 +57,7 @@
             <div class="file-field input-field">
               <div class="btn blue lighten-2 black-text">
                 <span>Capa</span>
-                <input type="file">
+                <input type="file" name="poster_file">
               </div>
               <div class="file-path-wrapper">
                 <input class="file-path validate" type="text" name="poster">
@@ -65,7 +65,7 @@
             </div>
 
             <div class="card-action">
-              <a class="btn waves-effect waves-light btn grey" href="galeria.php">Cancelar</a>
+              <a class="btn waves-effect waves-light btn grey" href="/">Cancelar</a>
               <button type="submit" class="waves-effect waves-light btn blue">Confirmar</button>
             </div>
           </div>
