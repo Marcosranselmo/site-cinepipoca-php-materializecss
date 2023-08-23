@@ -10,8 +10,35 @@ $filmes = $controller->index();
 
 <body>
 
-  <nav class="nav-extended blue lighten-3">
+  <nav class="nav-wrapper indigo">
+      <div class="container">
+        <a href="#" class="brand-logo">Site title</a>
+        <a href="#" class="sidenav-trigger" data-target="mobile-links">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Sass</a></li>
+          <li><a href="#">Components</a></li>
+          <li><a href="#">Javascript</a></li>
+          <li><a href="#">Mobile</a></li>
+        </ul>
+      </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-links">
+    <li><a href="#">Sass</a></li>
+    <li><a href="#">Components</a></li>
+    <li><a href="#">Javascript</a></li>
+    <li><a href="#">Mobile</a></li>
+  </ul>
+
+
+
+
+
+  <!-- <nav class="nav-extended blue lighten-3">
     <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Logo</a>
       <ul id="nav-mobile" class="right">
         <li class="active"><a href="/">Galeria</a></li>
         <li><a href="/novo">Cadastrar</a></li>
@@ -26,9 +53,9 @@ $filmes = $controller->index();
         <li class="tab"><a href="#test3">Favoritos</a></li>
       </ul>
     </div>
-  </nav>
+  </nav> -->
 
-  <div class="container">
+  <!-- <div class="container">
     <div class="row">
 
       <?php if (!$filmes) echo "<p class='card-panel red lighten-4'>Nenhum filme cadastrado</p>" ?>
@@ -61,12 +88,20 @@ $filmes = $controller->index();
       <?php endforeach ?>
     </div>
 
-  </div>
+  </div> -->
 
 
-  </div>
+  <!-- </div> -->
 
   <?= Mensagem::mostrar(); ?>
+
+
+  <script>
+  $(document).ready(function() {
+    $('.sidenav').sidenav();
+  })
+  </script>
+
 
   <script>
     document.querySelectorAll(".btn-fav").forEach(btn => {
