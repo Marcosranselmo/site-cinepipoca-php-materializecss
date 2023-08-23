@@ -40,7 +40,18 @@ class FilmesController {
             return false;
         };
     }
+
+    public function favorite(int $id) {
+        $filmesRepository = new FilmesRepositoryPDO();
+        $result = ['success' => $filmesRepository->favoritar($id)];
+        header('Content-type: application/json');
+        echo json_encode($result);
+    }
+
+    public function delete(int $id) {
+        $filmesRepository = new FilmesRepositoryPDO();
+        $result = ['success' => $filmesRepository->delete($id)];
+        header('Content-type: application/json');
+        echo json_encode($result);
+    }
 }
-
-
-?>

@@ -1,20 +1,23 @@
-body {
+body{
     background-color: #e5e5e5;
 }
 
-.nav-extended {
-    background-image: url("imagens/banner-topo.jpg");
-    background-repeat: no-repeat;
+.nav-extended{
+    background-image: url("imagens/capa.jpg");
     background-size: cover;
-    background-size: 100%;
     background-blend-mode: soft-light;
 }
 
-.nav ul li.active, .tab a.active {
-    border-bottom: solid 2px #fff;
+nav ul li.active, .tab a.active{
+    border-bottom: solid 2px #FFF;
     background-color: transparent;
 }
 
-.nav-header h1 {
-    text-shadow: 2px 2px 8px #000;
+.nav-header h1{
+    text-shadow: 2px 2px 15px #000000;
+}
+
+.fadeOut{
+    opacity: 0;
+    transition: 1s;
 }
