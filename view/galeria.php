@@ -8,64 +8,31 @@ $controller = new FilmesController();
 $filmes = $controller->index();
 ?>
 
+<style>
+
+</style>
+
 <body>
-
-  <!-- <nav class="white">
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo red-text">Logo</a>
-      <ul class="hide-on-med-and-down right">
-        <li>
-          <div class="center row">
-            <div class="col s12 ">
-              <div class="row" id="topbarsearch">
-                <div class="input-field col s6 s12 red-text">
-                  <i class="red-text material-icons prefix">search</i>
-                  <input type="text" placeholder="search" id="autocomplete-input" class="autocomplete red-text">
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li><a href="sass.html" class="red-text">Sass</a></li>
-        <li><a href="badges.html" class="red-text">Components</a></li>
-        <li><a href="collapsible.html" class="red-text">JavaScript</a></li>
-      </ul>
-    </div>
-  </nav> -->
-
-
-
-  <nav class="nav-wrapper indigo">
-    <div class="container">
-      <a href="#" class="brand-logo">Site title</a>
-      <a href="#" class="sidenav-trigger" data-target="mobile-links">
-        <i class="material-icons">menu</i>
-      </a>
-      <ul class="right hide-on-med-and-down">
-        <li>
-          <div class="center row">
-            <div class="col s12 center">
-              <div class="row" id="topbarsearch">
-                <div class="input-field col s6 s12 red-text">
-                  <i class="white-text material-icons prefix">search</i>
-                  <input type="text" placeholder="search" id="autocomplete-input" class="autocomplete red-text">
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li><a href="#">Login</a></li>
-        <li><a href="#">Cadastrar</a></li>
+  <nav class="black">
+    <div class="container black">
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">Logo</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="sass.html">Sass</a></li>
+          <li><a href="badges.html">Components</a></li>
+          <li><a href="collapsible.html">Javascript</a></li>
+          <li><a href="mobile.html">Mobile</a></li>
+        </ul>
+      </div>
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">Javascript</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
       </ul>
     </div>
   </nav>
-
-  <ul class="sidenav" id="mobile-links">
-    <li><a href="#">Sass</a></li>
-    <li><a href="#">Components</a></li>
-    <li><a href="#">Javascript</a></li>
-    <li><a href="#">Mobile</a></li>
-  </ul>
 
 
 
@@ -73,7 +40,7 @@ $filmes = $controller->index();
 
   <nav class="nav-extended blue lighten-3">
     <div class="nav-wrapper">
-    <a href="#" class="brand-logo">Logo</a>
+      <a href="#" class="brand-logo">Logo</a>
       <ul id="nav-mobile" class="right">
         <li class="active"><a href="/">Galeria</a></li>
         <li><a href="/novo">Cadastrar</a></li>

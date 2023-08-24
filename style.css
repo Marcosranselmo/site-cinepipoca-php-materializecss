@@ -21,3 +21,9 @@ nav ul li.active, .tab a.active{
     opacity: 0;
     transition: 1s;
 }
+
+img {
+    width: 150px;
+    position: relative;
+    transform: translateY(50%);
+}
