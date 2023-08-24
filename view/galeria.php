@@ -10,19 +10,54 @@ $filmes = $controller->index();
 
 <body>
 
+  <!-- <nav class="white">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo red-text">Logo</a>
+      <ul class="hide-on-med-and-down right">
+        <li>
+          <div class="center row">
+            <div class="col s12 ">
+              <div class="row" id="topbarsearch">
+                <div class="input-field col s6 s12 red-text">
+                  <i class="red-text material-icons prefix">search</i>
+                  <input type="text" placeholder="search" id="autocomplete-input" class="autocomplete red-text">
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="sass.html" class="red-text">Sass</a></li>
+        <li><a href="badges.html" class="red-text">Components</a></li>
+        <li><a href="collapsible.html" class="red-text">JavaScript</a></li>
+      </ul>
+    </div>
+  </nav> -->
+
+
+
   <nav class="nav-wrapper indigo">
-      <div class="container">
-        <a href="#" class="brand-logo">Site title</a>
-        <a href="#" class="sidenav-trigger" data-target="mobile-links">
-          <i class="material-icons">menu</i>
-        </a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="#">Sass</a></li>
-          <li><a href="#">Components</a></li>
-          <li><a href="#">Javascript</a></li>
-          <li><a href="#">Mobile</a></li>
-        </ul>
-      </div>
+    <div class="container">
+      <a href="#" class="brand-logo">Site title</a>
+      <a href="#" class="sidenav-trigger" data-target="mobile-links">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <div class="center row">
+            <div class="col s12 center">
+              <div class="row" id="topbarsearch">
+                <div class="input-field col s6 s12 red-text">
+                  <i class="white-text material-icons prefix">search</i>
+                  <input type="text" placeholder="search" id="autocomplete-input" class="autocomplete red-text">
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Cadastrar</a></li>
+      </ul>
+    </div>
   </nav>
 
   <ul class="sidenav" id="mobile-links">
@@ -97,9 +132,9 @@ $filmes = $controller->index();
 
 
   <script>
-  $(document).ready(function() {
-    $('.sidenav').sidenav();
-  })
+    $(document).ready(function() {
+      $('.sidenav').sidenav();
+    })
   </script>
 
 
@@ -129,7 +164,10 @@ $filmes = $controller->index();
     document.querySelectorAll(".btn-delete").forEach(btn => {
       btn.addEventListener("click", e => {
         const id = btn.getAttribute("data-id")
-        const requestConfig = { method: "DELETE", headers: new Headers()}
+        const requestConfig = {
+          method: "DELETE",
+          headers: new Headers()
+        }
         fetch(`/filmes/${id}`, requestConfig)
           .then(response => response.json())
           .then(response => {
