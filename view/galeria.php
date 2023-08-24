@@ -30,6 +30,7 @@ $filmes = $controller->index();
     <li><a href="#">Components</a></li>
     <li><a href="#">Javascript</a></li>
     <li><a href="#">Mobile</a></li>
+    <li><a href="#">Mobile</a></li>
   </ul>
 
 
