@@ -71,7 +71,7 @@ $filmes = $controller->index();
 
 
 
-  <!-- <nav class="nav-extended blue lighten-3">
+  <nav class="nav-extended blue lighten-3">
     <div class="nav-wrapper">
     <a href="#" class="brand-logo">Logo</a>
       <ul id="nav-mobile" class="right">
@@ -88,9 +88,9 @@ $filmes = $controller->index();
         <li class="tab"><a href="#test3">Favoritos</a></li>
       </ul>
     </div>
-  </nav> -->
+  </nav>
 
-  <!-- <div class="container">
+  <div class="container">
     <div class="row">
 
       <?php if (!$filmes) echo "<p class='card-panel red lighten-4'>Nenhum filme cadastrado</p>" ?>
@@ -123,10 +123,10 @@ $filmes = $controller->index();
       <?php endforeach ?>
     </div>
 
-  </div> -->
+  </div>
 
 
-  <!-- </div> -->
+  </div>
 
   <?= Mensagem::mostrar(); ?>
 
