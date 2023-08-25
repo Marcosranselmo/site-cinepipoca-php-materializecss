@@ -8,54 +8,39 @@ $controller = new FilmesController();
 $filmes = $controller->index();
 ?>
 
-<style>
-
-</style>
-
 <body>
-  <nav class="black">
+
+  <!-- Menu responsive -->
+  <nav class="brown">
     <div class="container black">
       <div class="nav-wrapper">
         <a href="#!" class="brand-logo">Logo</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li><a href="collapsible.html">Javascript</a></li>
-          <li><a href="mobile.html">Mobile</a></li>
+          <li><a href="/">Galeria</a></li>
+          <li><a href="/novo">Cadastrar filmes</a></li>
+          <li><a href="collapsible.html">Minha conta</a></li>
+          <li><a href="mobile.html">Entrar</a></li>
         </ul>
       </div>
       <ul class="sidenav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
+        <li><a href="/">Galeria</a></li>
+        <li><a href="/novo">Cadastrar filmes</a></li>
+        <li><a href="collapsible.html">Minha conta</a></li>
+        <li><a href="mobile.html">Entrar</a></li>
       </ul>
     </div>
-  </nav>
+  </nav> 
 
-
-
-
-
-  <nav class="nav-extended blue lighten-3">
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
-      <ul id="nav-mobile" class="right">
-        <li class="active"><a href="/">Galeria</a></li>
-        <li><a href="/novo">Cadastrar</a></li>
-      </ul>
+  <!-- Slider -->
+  <div class="container">
+    <div class="carousel carousel-slider">
+      <a class="carousel-item" href="#one!"><img src="../imagens/slider/slider01.jpg"></a>
+      <a class="carousel-item" href="#two!"><img src="../imagens/slider/slider02.jpg"></a>
+      <a class="carousel-item" href="#three!"><img src="../imagens/slider/slider03.jpg"></a>
+      <a class="carousel-item" href="#four!"><img src="../imagens/slider/slider04.jpg"></a>
     </div>
-    <div class="nav-header center">
-      <h1>CLOROCINE</h1>
-    </div>
-    <div class="nav-content">
-      <ul class="tabs tabs-transparent blue darken-1">
-        <li class="tab"><a class="active" href="#test1">Todos</a></li>
-        <li class="tab"><a href="#test3">Favoritos</a></li>
-      </ul>
-    </div>
-  </nav>
+  </div>
 
   <div class="container">
     <div class="row">
@@ -92,11 +77,17 @@ $filmes = $controller->index();
 
   </div>
 
-
   </div>
 
-  <?= Mensagem::mostrar(); ?>
+  <script>
+  $(document).ready(function() {
+    
+  $('.carousel.carousel-slider').carousel({
+    fullWidth: true});
+  });
+  </script>
 
+  <?= Mensagem::mostrar(); ?>
 
   <script>
     $(document).ready(function() {
@@ -104,7 +95,7 @@ $filmes = $controller->index();
     })
   </script>
 
-
+  <!-- Favoritar -->
   <script>
     document.querySelectorAll(".btn-fav").forEach(btn => {
       btn.addEventListener("click", e => {
